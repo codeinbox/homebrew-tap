@@ -10,16 +10,16 @@ class CodeinboxCli < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/code-inbox/homebrew-tap/releases/download/v1.0.0/homebrew-tap_Darwin_x86_64.tar.gz"
-      sha256 "04218b19e99d9aa9af1a1b17240373b994a5e46c2e14feb046fca4f33ef66b75"
+      url "https://github.com/codeinbox/homebrew-tap/releases/download/v1.0.0/homebrew-tap_Darwin_x86_64.tar.gz"
+      sha256 "8105045ece114ee56496f429408277bfe768771ac12188866f57b9bf9f6307bb"
 
       def install
         bin.install "homebrew-tap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/code-inbox/homebrew-tap/releases/download/v1.0.0/homebrew-tap_Darwin_arm64.tar.gz"
-      sha256 "2b2f1e8780e8952da0692189c5d0e0e47f93521c37698b5a10a5dd1bf7b51938"
+      url "https://github.com/codeinbox/homebrew-tap/releases/download/v1.0.0/homebrew-tap_Darwin_arm64.tar.gz"
+      sha256 "d7097d96ff8195b528782e16fa156069836cbf7b78492a257a0282b5618afe9c"
 
       def install
         bin.install "homebrew-tap"
@@ -30,8 +30,8 @@ class CodeinboxCli < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/code-inbox/homebrew-tap/releases/download/v1.0.0/homebrew-tap_Linux_x86_64.tar.gz"
-        sha256 "c9e140e58cd66a5a8c125857cfbd51c1996807f143790f82cdeb6ac9d448ce88"
+        url "https://github.com/codeinbox/homebrew-tap/releases/download/v1.0.0/homebrew-tap_Linux_x86_64.tar.gz"
+        sha256 "21829124e1f7923f2b8a68236a4ab96ebb88b4006d5517da951d3017ba1aafee"
 
         def install
           bin.install "homebrew-tap"
@@ -40,8 +40,8 @@ class CodeinboxCli < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/code-inbox/homebrew-tap/releases/download/v1.0.0/homebrew-tap_Linux_arm64.tar.gz"
-        sha256 "979dc18c9bd517a0eed0d62c122b6e48d43040680e2247122d7e602213eb8a50"
+        url "https://github.com/codeinbox/homebrew-tap/releases/download/v1.0.0/homebrew-tap_Linux_arm64.tar.gz"
+        sha256 "db474c9b1b996d379cb7164e893999c1b2a1c9295132f50f9dcb2f3e953e192f"
 
         def install
           bin.install "homebrew-tap"
