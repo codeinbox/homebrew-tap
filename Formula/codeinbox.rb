@@ -5,21 +5,21 @@
 class Codeinbox < Formula
   desc "CodeInbox CLI."
   homepage "https://magicbell.com"
-  version "1.0.1"
+  version "1.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/codeinbox/homebrew-tap/releases/download/v1.0.1/codeinbox_Darwin_x86_64.tar.gz"
-      sha256 "e03c25ef7b7495e8c9151c6c4b9900e51e1b41be5465141200a6617db3028964"
+      url "https://github.com/codeinbox/homebrew-tap/releases/download/v1.0.2/codeinbox_Darwin_x86_64.tar.gz"
+      sha256 "9f1b12542917101f28a2e7460d156a5f75206ab920543cef8be18249d788c323"
 
       def install
         bin.install "codeinbox"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/codeinbox/homebrew-tap/releases/download/v1.0.1/codeinbox_Darwin_arm64.tar.gz"
-      sha256 "c6e1711bc600db9857d27759f41d779dad442911354d8103ef5c76c28344ae88"
+      url "https://github.com/codeinbox/homebrew-tap/releases/download/v1.0.2/codeinbox_Darwin_arm64.tar.gz"
+      sha256 "a58990fadf0f8a37e526edebf4ff66f9ecd04f32fb1ce07d8fa02e7aca4e0de8"
 
       def install
         bin.install "codeinbox"
@@ -28,24 +28,18 @@ class Codeinbox < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/codeinbox/homebrew-tap/releases/download/v1.0.1/codeinbox_Linux_x86_64.tar.gz"
-        sha256 "5f95a071ab9d1fe5aa5cd19d333d732d21f8366000178292eb198ef85efe5b43"
-
-        def install
-          bin.install "codeinbox"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/codeinbox/homebrew-tap/releases/download/v1.0.2/codeinbox_Linux_x86_64.tar.gz"
+      sha256 "773999c7c6cbf28c7fe5c5bc7b0a3f9f654028ecf97df6aff84ce9d14c1b128f"
+      def install
+        bin.install "codeinbox"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/codeinbox/homebrew-tap/releases/download/v1.0.1/codeinbox_Linux_arm64.tar.gz"
-        sha256 "be8228525b44627542fec30666b3abc41cbe27626567e3aec8d0dd1f794072fb"
-
-        def install
-          bin.install "codeinbox"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/codeinbox/homebrew-tap/releases/download/v1.0.2/codeinbox_Linux_arm64.tar.gz"
+      sha256 "b5723a8d2b71334207b980a56d56c8574e4d0967f07e1f8f2232d2e53db2d576"
+      def install
+        bin.install "codeinbox"
       end
     end
   end
